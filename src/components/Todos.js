@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-native';
-import * as Actions from '../actions/index';
+import * as Actions from '../actions/todos';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
