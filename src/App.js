@@ -2,8 +2,10 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
+import store from './store';
+import { Provider } from 'react-redux';
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
@@ -52,6 +54,14 @@ export default class App extends React.Component {
   _handleFinishLoading = () => {
     this.setState({ isLoadingComplete: true });
   };
+}
+
+export default function() {
+  return(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({

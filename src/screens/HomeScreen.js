@@ -11,6 +11,7 @@ import {
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+import Todos from '../components/Todos';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -21,6 +22,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+          <Todos />
           <View style={styles.welcomeContainer}>
             <Image
               source={
