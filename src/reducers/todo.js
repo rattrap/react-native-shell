@@ -15,6 +15,7 @@ export default todoReducer = (state = todoState, action) => {
             });
             return state;
         case FETCH_TODOS + '_FAIL':
+            
             return state;
         default:
             return state;
