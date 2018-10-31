@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProvider } from 'native-base';
+import { Root, StyleProvider } from 'native-base';
 import store from '../store';
 import { Provider } from 'react-redux';
 import getTheme from '../theme/components';
@@ -9,9 +9,11 @@ import App from '../App';
 export default function() {
   return (
     <Provider store={store}>
-        <StyleProvider style={getTheme(variables)}>
-            <App />
-        </StyleProvider>
+        <Root>
+          <StyleProvider style={getTheme(variables)}>
+              <App />
+          </StyleProvider>
+        </Root>
     </Provider>
   );
 };
