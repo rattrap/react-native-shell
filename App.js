@@ -1,8 +1,8 @@
 import React from 'react';
-import App from './src/App'
+import Setup from './src/boot/setup';
 
-export default function(props) {
+export default function() {
   return (
-    <App />
+    <Setup />
   );
 };
